@@ -23,7 +23,7 @@ function loadingAnimation() {
           // console.log(grow)
           h5timer.innerHTML = grow;
         }
-      }, 33);
+      }, 50);
     },
   });
   tl.to(".line h2", {
@@ -55,7 +55,7 @@ function loadingAnimation() {
   });
 
   tl.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero4 h1", {
-    y: 120,
+    y: 140,
     stagger: 0.2,
   });
 }
@@ -72,3 +72,4 @@ function cursorAnimation() {
   Shery.makeMagnet("#nav-part2 h4", {});
 }
 cursorAnimation();
+

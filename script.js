@@ -1,3 +1,36 @@
+gsap.registerPlugin(ScrollTrigger);
+
+function locomotiveAnimation() {
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    pinType: document.querySelector("#main").style.transform
+      ? "transform"
+      : "fixed",
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+  ScrollTrigger.refresh();
+}
+
 function loadingAnimation() {
   var tl = gsap.timeline();
   tl.from(".line h1", {
@@ -23,14 +56,13 @@ function loadingAnimation() {
           // console.log(grow)
           h5timer.innerHTML = grow;
         }
-      }, 50);
+      }, 33);
     },
   });
   tl.to(".line h2", {
-    animationName: "anime",
+    animationName: "loaderanime",
     opacity: 1,
   });
-  // tl.to("#line1-part1");
 
   tl.to("#loader", {
     opacity: 0,
@@ -38,11 +70,12 @@ function loadingAnimation() {
     delay: 0,
   });
 
+  // MAIN
   tl.from("#page1", {
     delay: 0.2,
-    y: 1600,
-    opacity: 0,
-    duration: 0.6,
+    y: 1200,
+    // opacity: 0,
+    duration: 0.8,
     ease: Power4,
   });
 
@@ -58,8 +91,11 @@ function loadingAnimation() {
     y: 140,
     stagger: 0.2,
   });
+  tl.from("#hero1,#page2 ", {
+    opacity: 0,
+
+  },"-=1");//ye phle chlaega timeline ko 
 }
-loadingAnimation();
 
 function cursorAnimation() {
   document.addEventListener("mousemove", function (dets) {
@@ -71,5 +107,6 @@ function cursorAnimation() {
   });
   Shery.makeMagnet("#nav-part2 h4", {});
 }
-// cursorAnimation();
-
+locomotiveAnimation();
+loadingAnimation();
+cursorAnimation();

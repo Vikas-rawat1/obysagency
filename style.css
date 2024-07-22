@@ -5,6 +5,7 @@
   color: #fff;
   font-family: "Plain-light";
 }
+
 @font-face {
   font-family: Plain-light;
   src: url(font/plain-light-webfont.ttf);
@@ -14,13 +15,13 @@
   font-family: Plain-regular;
   src: url(font/plain-regular-webfont.ttf);
 }
+
 @font-face {
   font-family: silk-serif;
   src: url(font/silkserif-lightitalic-webfont.ttf);
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -28,12 +29,12 @@ body {
 body {
   overflow-x: hidden;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
 
 #cursor {
-  /* background-color: #fff; */
   border-radius: 50%;
   width: 3.5vw;
   height: 3.5vw;
@@ -54,7 +55,6 @@ body::-webkit-scrollbar {
 }
 
 .line {
-  /* background-color: red; */
   height: fit-content;
   overflow: hidden;
   display: flex;
@@ -92,13 +92,12 @@ body::-webkit-scrollbar {
   font-size: 5vw;
   text-transform: uppercase;
   font-weight: 900;
-  /* animation-name: anime; */
   opacity: 0;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation: loaderanime 2s infinite;
 }
 
-@keyframes anime {
+
+@keyframes loaderanime {
   0% {
     font-family: "Plain-light";
     -webkit-text-stroke: 0.1px #fff;
@@ -154,7 +153,7 @@ body::-webkit-scrollbar {
   gap: 3vw;
 }
 
-#nav-part2 {
+#nav-part2 h4 {
   font-size: 1.2vw;
 }
 
@@ -162,11 +161,8 @@ body::-webkit-scrollbar {
   width: 72%;
   margin-left: 27%;
   height: fit-content;
-  overflow-y: hidden;
   display: flex;
   align-items: center;
-  /* position: relative; */
-  /* z-index: 999; */
 }
 
 .hero:nth-child(2) {
@@ -188,7 +184,7 @@ body::-webkit-scrollbar {
   font-weight: 100;
   font-family: silk-serif;
   left: 20%;
-  top: 40%;
+  top: 33%;
 }
 
 .hero h2 {
@@ -197,16 +193,13 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
   line-height: 7vw;
   border-bottom: 0.5vw solid #fff;
-  /* padding-bottom: 0.8vw;
-  transition: all ease 0.3s; */
 }
 
 .hero h2:hover {
   -webkit-text-stroke: 2px #fff;
   color: transparent;
   font-weight: 500;
-  border-bottom: transparent;
-  border-bottom: 0.5vw solid #ffffff00;
+  border-bottom: 0.5vw solid transparent;
 }
 
 #page2 {
@@ -228,11 +221,9 @@ body::-webkit-scrollbar {
 #video-container {
   height: 66vh;
   width: 71%;
-  /* background-color: red; */
   position: relative;
   left: 28%;
   background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
-  /* overflow: hidden; */
 }
 
 #video-container video {
@@ -269,8 +260,6 @@ body::-webkit-scrollbar {
 #page4 {
   min-height: 100vh;
   width: 100%;
-  position: relative;
-  /* background-color: rgb(61, 61, 61); */
   padding: 7vh 0;
 }
 
@@ -311,8 +300,6 @@ body::-webkit-scrollbar {
 
 #page4-flex {
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
 }
 
 #page4-flex img {
@@ -338,7 +325,6 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  /* background-color: red; */
   padding: 1.7vw 0;
   border-bottom: 2px solid #ffffff94;
 }
@@ -352,16 +338,12 @@ body::-webkit-scrollbar {
   width: 40%;
   font-size: 0.9vw;
 }
-
 #page5 {
   min-height: 100vh;
   width: 100%;
-  /* padding: 5vw o; */
-  position: relative;
 }
 
 .elem {
-  /* background-color: red; */
   white-space: nowrap;
   overflow-x: hidden;
   margin-bottom: -2vw;
@@ -375,10 +357,7 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
   display: inline-block;
   margin-right: 16px;
-  animation-name: anime;
-  animation-duration: 12s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: anime 12s linear infinite;
 }
 
 @keyframes anime {
@@ -428,7 +407,7 @@ body::-webkit-scrollbar {
   height: 80vh;
   width: 100%;
   /* background-color: red; */
-  position: relative;
+  /* position: relative; */
   padding-left: 28vw;
   padding-right: 2vw;
 }

@@ -149,7 +149,7 @@ function sheryAnimation() {
     style: 2,
     onUpdate() {
       // Ensure scrolling is not disabled here
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     },
     // debug: true,
     config: {
@@ -458,28 +458,30 @@ function flagAnimation() {
 //   });
 // }
 
-
-
-// Detect device type and initialize appropriate animations
 function initializeAnimations() {
-  if (
-    !/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
+  const isMobile =
+    /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini|Chrome|Brave/i.test(
       navigator.userAgent
-    )
-  ) {
+    );
+  console.log("Is mobile:", isMobile);
+
+  document.querySelector(".mobile").textContent = isMobile;
+
+  if (!isMobile) {
+    console.log("Initializing animations for desktop");
     locomotiveAnimation();
-    loadingAnimation(); 
+    loadingAnimation();
     cursorAnimation();
     flagAnimation();
     sheryAnimation();
-  }
-   else {
+  } else {
+    console.log("Initializing animations for mobile");
     var extraImg = document.querySelectorAll(".extraImg");
     extraImg.forEach(function (img) {
       img.style.display = "none";
     });
     mobileScreen();
-    gsapMobileScroll(); 
+    gsapMobileScroll();
   }
 }
 

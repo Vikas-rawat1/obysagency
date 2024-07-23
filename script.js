@@ -237,7 +237,7 @@ function flag() {
 }
 
 locomotiveAnimation();
-// loadingAnimation();
+loadingAnimation();
 cursorAnimation();
 sheryAnimation();
 flag();

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "Plain-light";
-  cursor: none;
+  /* cursor: none; */
 }
 
 @font-face {
@@ -294,7 +294,7 @@ body {
   width: 71vw;
   position: relative;
   left: 28%;
-  background-color: red;
+  /* background-color: red; */
   background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
   background-size: cover;
   background-position: center;
@@ -752,7 +752,7 @@ body {
 
 ._canvas_container {
   z-index: 999999 !important;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 #flag {
   height: 25vw;

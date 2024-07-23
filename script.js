@@ -96,11 +96,11 @@ function cursorAnimation() {
   Shery.makeMagnet("#nav-part2 h4");
 
   var videoContainer = document.querySelector("#video-container");
-  var video = document.querySelector("#video-container video")
+  var video = document.querySelector("#video-container video");
   videoContainer.addEventListener("mouseenter", function () {
     videoContainer.addEventListener("mousemove", function (dets) {
       gsap.to(".mousefollower", {
-        opacity: 0
+        opacity: 0,
       });
       gsap.to("#video-cursor", {
         left: dets.x - 570,
@@ -110,8 +110,7 @@ function cursorAnimation() {
   });
   videoContainer.addEventListener("mouseleave", function () {
     gsap.to(".mousefollower", {
-      opacity: 1
-
+      opacity: 1,
     });
     gsap.to("#video-cursor", {
       left: "70%",
@@ -119,50 +118,31 @@ function cursorAnimation() {
     });
   });
 
-
-
-  var flag = 0
+  var flagVideo = 0;
   videoContainer.addEventListener("click", function () {
-    if (flag == 0) {
-      video.play()
-      video.style.opacity = 1
-      document.querySelector("#video-cursor").innerHTML = `<i class="ri-pause-mini-fill"></i>`
+    if (flagVideo == 0) {
+      video.play();
+      video.style.opacity = 1;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `<i class="ri-pause-mini-fill"></i>`;
       gsap.to("#video-cursor", {
-        scale: 0.5
-      })
-      flag = 1
+        scale: 0.5,
+      });
+      flagVideo = 1;
     } else {
-      video.pause()
-      video.style.opacity = 0
-      document.querySelector("#video-cursor").innerHTML = `<i class="ri-play-mini-fill"></i>`
+      video.pause();
+      video.style.opacity = 0;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `<i class="ri-play-mini-fill"></i>`;
       gsap.to("#video-cursor", {
-        scale: 1
-      })
-      flag = 0
+        scale: 1,
+      });
+      flagVideo = 0;
     }
-  })
-}
-
-function flagAnimation() {
-  document.addEventListener("mousemove", function (dets) {
-    gsap.to("#flag", {
-      x: dets.x,
-      y: dets.y,
-    });
-  });
-
-  document.querySelector("#hero3").addEventListener("mouseenter", function () {
-    gsap.to("#flag", {
-      opacity: 1,
-    });
-  });
-  document.querySelector("#hero3").addEventListener("mouseleave", function () {
-    gsap.to("#flag", {
-      opacity: 0,
-    });
   });
 }
-
 
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
@@ -221,6 +201,25 @@ function sheryAnimation() {
   });
 }
 
+function flagAnimation() {
+  document.addEventListener("mousemove", function (dets) {
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+    });
+  });
+
+  document.querySelector("#hero3").addEventListener("mouseenter", function () {
+    gsap.to("#flag", {
+      opacity: 1,
+    });
+  });
+  document.querySelector("#hero3").addEventListener("mouseleave", function () {
+    gsap.to("#flag", {
+      opacity: 0,
+    });
+  });
+}
 
 loadingAnimation();
 cursorAnimation();

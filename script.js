@@ -101,24 +101,89 @@ function loadingAnimation() {
 }
 
 function cursorAnimation() {
-  document.addEventListener("mousemove", function (dets) {
-    gsap.to("#cursor", {
-      x: dets.x,
-      y: dets.y,
-      ease: "back.out(1.7)",
+  Shery.mouseFollower({
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+
+  Shery.makeMagnet("#nav-part2 h4", {});
+
+  var videoContainer = document.querySelector("#video-container");
+  var video = document.querySelector("#video-container video");
+  videoContainer.addEventListener("mouseenter", function () {
+    videoContainer.addEventListener("mousemove", function (dets) {
+      gsap.to(".mousefollower", {
+        opacity: 0,
+      });
+      gsap.to("#video-cursor", {
+        left: dets.x - 570,
+        y: dets.y - 300,
+      });
     });
   });
-  Shery.makeMagnet("#nav-part2 h4", {});
+
+  videoContainer.addEventListener("mouseleave", function () {
+    gsap.to(".mousefollower", {
+      opacity: 1,
+    });
+    gsap.to("#video-cursor", {
+      left: "70%",
+      top: "-15%",
+    });
+  });
+
+  var flag = 0;
+  videoContainer.addEventListener("click", function () {
+    if (flag == 0) {
+      video.play();
+      video.style.opacity = 1;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `<i class="ri-pause-line"></i>`;
+      gsap.to("#video-cursor", {
+        scale: 0.5,
+      });
+      flag = 1;
+    } else {
+      video.pause();
+      video.style.opacity = 0;
+      document.querySelector(
+        "#video-cursor"
+      ).innerHTML = `          <i class="ri-play-large-fill"></i>
+`;
+      gsap.to("#video-cursor", {
+        scale: 1,
+      });
+      flag = 0;
+    }
+  });
 }
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
-    style: 5,
+    style: 2,
     // debug: true,
     config: {
-      a: { value: 1.83, range: [0, 30] },
-      b: { value: 0.92, range: [-1, 1] },
+      resolutionXY: { value: 100 },
+      distortion: { value: true },
+      mode: { value: -10 },
+      mousemove: { value: 3 },
+      modeA: { value: 1 },
+      modeN: { value: 3 },
+      speed: { value: 1, range: [-500, 500], rangep: [-10, 10] },
+      frequency: { value: 50, range: [-800, 800], rangep: [-50, 50] },
+      angle: { value: 0.5, range: [0, 3.141592653589793] },
+      waveFactor: { value: 1.4, range: [-3, 3] },
+      color: { value: 10212607 },
+      pixelStrength: { value: 3, range: [-20, 100], rangep: [-20, 20] },
+      quality: { value: 5, range: [0, 10] },
+      contrast: { value: 1, range: [-25, 25] },
+      brightness: { value: 1, range: [-1, 25] },
+      colorExposer: { value: 0.18, range: [-5, 5] },
+      strength: { value: 0.2, range: [-40, 40], rangep: [-5, 5] },
+      exposer: { value: 8, range: [-100, 100] },
       zindex: { value: -9996999, range: [-9999999, 9999999] },
-      aspect: { value: 0.7241195605115471 },
+      aspect: { value: 0.7666557722625823 },
       ignoreShapeAspect: { value: true },
       shapePosition: { value: { x: 0, y: 0 } },
       shapeScale: { value: { x: 0.5, y: 0.5 } },
@@ -132,24 +197,47 @@ function sheryAnimation() {
       durationOut: { value: 1, range: [0.1, 5] },
       durationIn: { value: 1.5, range: [0.1, 5] },
       displaceAmount: { value: 0.5 },
-      masker: { value: true },
-      maskVal: { value: 1.24, range: [1, 5] },
+      masker: { value: false },
+      maskVal: { value: 1, range: [1, 5] },
       scrollType: { value: 0 },
       geoVertex: { range: [1, 64], value: 1 },
       noEffectGooey: { value: true },
       onMouse: { value: 0 },
-      noise_speed: { value: 0.69, range: [0, 10] },
-      metaball: { value: 0.34, range: [0, 2] },
-      discard_threshold: { value: 0.69, range: [0, 1] },
-      antialias_threshold: { value: 0.01, range: [0, 0.1] },
-      noise_height: { value: 0.5, range: [0, 2] },
-      noise_scale: { value: 6.87, range: [0, 100] },
+      noise_speed: { value: 0.76, range: [0, 10] },
+      metaball: { value: 0.6, range: [0, 2] },
+      discard_threshold: { value: 0.5, range: [0, 1] },
+      antialias_threshold: { value: 0, range: [0, 0.1] },
+      noise_height: { value: 0.37, range: [0, 2] },
+      noise_scale: { value: 7.63, range: [0, 100] },
+      a: { value: 1.37, range: [0, 30] },
+      b: { value: -0.91, range: [-1, 1] },
     },
     gooey: true,
   });
 }
 
+function flag() {
+  document.addEventListener("mousemove", function (dets) {
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+    });
+  });
+
+  document.querySelector("#hero3").addEventListener("mouseenter", function () {
+    gsap.to("#flag", {
+      opacity: 1,
+    });
+  });
+  document.querySelector("#hero3").addEventListener("mouseleave", function () {
+    gsap.to("#flag", {
+      opacity: 0,
+    });
+  });
+}
+
 locomotiveAnimation();
-loadingAnimation();
+// loadingAnimation();
 cursorAnimation();
 sheryAnimation();
+flag();

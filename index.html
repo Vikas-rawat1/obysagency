@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="shorcut icon" href="./favicon.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="./favicon.png" type="image/x-icon">
   <title>Obys Agency</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <div id="cursor"></div>
+  <!-- <div id="cursor"></div> -->
 
-  <div id="loader">
+  <!-- <div id="loader">
     <div class="line">
       <div id="line1-part1">
         <h5>00</h5>
@@ -31,7 +31,7 @@
       <h1>is loading right</h1>
       <h2>Now</h2>
     </div>
-  </div>
+  </div> -->
   <div id="main">
 
     <div id="page1" data-scroll data-scroll-speed="-1">
@@ -87,23 +87,25 @@
       <div class="hero" id="hero4">
         <h1>Experience</h1>
       </div>
+      <img id="flag" src="https://obys.agency/wp-content/uploads/2022/03/Flag.jpg" alt="">
+
     </div>
     <div id="page2" data-scroll data-scroll-speed="-1">
       <div id="video-container">
         <div id="video-cursor">
           <i class="ri-play-large-fill"></i>
         </div>
-        <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt="">
-        <!-- <video src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4" autoplay loop muted></video> -->
+        <!-- <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt=""> -->
+        <video src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
       </div>
     </div>
     <div id="page3" data-scroll data-scroll-speed="-1">
       <h1>OUR PROJECTS</h1>
       <div class="underline"></div>
       <div id="image-div-container">
-        <div class="image-div">
+        <div class="image-div" style="opacity: 0;">
           <img src="images/Olga_Prudka_1.jpg" alt="">
-          <img src="images/Olga_Prudka_2.jpg" alt="">
+          <img  src="images/Olga_Prudka_2.jpg" alt="" style="display:none;">
         </div>
         <div class="image-div">
           <img src="images/AIM-1.jpg" alt="">
@@ -137,7 +139,7 @@
 
         <div class="image-div">
           <img src="images/OCHI.jpg" alt="">
-          <img src="images/OCHI_2-1.jpg" alt="">
+          <img src="images/OCHI_2.png" alt="">
         </div>
         <div class="image-div">
           <img src="images/Laxer_1-2.jpg" alt="">
@@ -213,31 +215,32 @@
         <h1><span>Science</span> - Partners - Travel- </h1>
       </div>
     </div>
+
     <div id="footer" data-scroll data-scroll-speed="-1">
-      <h1>Let's create</h1>
-      <div class="underline"></div>
-      <div id="footer-div">
-        <div id="box">
-          <h6>Social</h5>
-            <h5>Dribble</h5>
-            <h5>Behance</h5>
-            <h5>Instagram</h5>
-            <h5>Facebook</h5>
-            <h5>Twitter</h5>
+      <h1>Let's Create</h1>
+        <div class="underline"></div>
+        <div id="footer-div">
+          <div id="box">
+            <h6>Social</h5>
+              <h5>Dribble</h5>
+              <h5>Behance</h5>
+              <h5>Instagram</h5>
+              <h5>Facebook</h5>
+              <h5>Twitter</h5>
+          </div>
+          <div id="box">
+            <h6>Address</h6>
+            <h5>Zamarstynivska 55
+              79019 Lviv
+              Ukraine</h5>
+          </div>
+          <div id="box">
+            <h6>Say Hi!</h6>
+            <h5>info@obys.agency</h5>
+          </div>
         </div>
-        <div id="box">
-          <h6>Address</h6>
-          <h5>Zamarstynivska 55
-            79019 Lviv
-            Ukraine</h5>
-        </div>
-        <div id="box">
-          <h6>Say Hi!</h6>
-          <h5>info@obys.agency</h5>
-        </div>
-      </div>
-      <div class="underline"></div>
-      <h5>Obys Agency &copy; 2024</h5>
+        <div class="underline"></div>
+        <h5>Obys Agency &copy; 2024</h5>
     </div>
   </div>
 
@@ -253,6 +256,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
 
   <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
 

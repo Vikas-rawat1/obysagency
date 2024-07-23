@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "Plain-light";
+  cursor: none;
 }
 
 @font-face {
@@ -34,7 +35,7 @@ body {
 .mousefollower {
   border: 2px solid white;
   background-color: rgb(255, 255, 255);
-  scale: 2;
+  scale: 3;
   mix-blend-mode: difference;
 }
 
@@ -42,7 +43,7 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 9999;
+  /* z-index: 9999; */
   background-color: #0b0b0b;
   padding: 25vh 10vw;
 }
@@ -123,7 +124,7 @@ body {
 #main {
   position: relative;
   background-color: #151515;
-  z-index: 99;
+  /* z-index: 99; */
 }
 
 #page1 {
@@ -248,7 +249,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  /* z-index: 999; */
 }
 
 #video-cursor i {
@@ -606,7 +607,7 @@ body {
 }
 
 ._canvas_container {
-  z-index: 9999999 !important;
+  /* z-index: 9999999 !important; */
   pointer-events: none;
 }
 
@@ -620,7 +621,7 @@ body {
 }
 
 #hero3 {
-  z-index: 999;
+  /* z-index: 999; */
   position: relative;
 }
 @media only screen and (max-width: 900px) {
@@ -695,7 +696,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    /* z-index: 999; */
   }
 
   #video-cursor i {
@@ -859,7 +860,7 @@ body {
     font-size: 7vw;
   }
   ._canvas_container {
-    z-index: 9999999 !important;
+    /* z-index: 9999999 !important; */
     pointer-events: none;
   }
 }

@@ -145,36 +145,6 @@ body {
   }
 }
 
-/* @keyframes loaderanime {
-  0% {
-    font-family: "Plain-light";
-    -webkit-text-stroke: 0.1px #fff;
-    color: #fff;
-    font-weight: 500;
-    opacity: 1;
-  }
-  48% {
-    font-family: "Plain-light";
-    -webkit-text-stroke: 0.1px #fff;
-    color: #fff;
-    font-weight: 500;
-    opacity: 0;
-  }
-  50% {
-    font-family: "silk-serif";
-    -webkit-text-stroke: 0.1px #fff;
-    color: transparent;
-    font-weight: 500;
-    opacity: 1;
-  }
-  100% {
-    font-family: "silk-serif";
-    -webkit-text-stroke: 0.1px #fff;
-    color: transparent;
-    font-weight: 500;
-    opacity: 0;
-  }
-} */
 
 #main {
   position: relative;

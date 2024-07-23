@@ -5,7 +5,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: "Plain-light";
-  /* cursor: none; */
+  cursor: none;
 }
 
 @font-face {
@@ -29,9 +29,9 @@ body {
   height: 100%;
 }
 
-/* body {
+body {
   overflow-x: hidden;
-} */
+}
 
 .mousefollower {
   border: 2px solid white;

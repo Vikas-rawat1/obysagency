@@ -352,7 +352,7 @@ body {
 
 .image-div {
   height: 42vw;
-  width: 31vw;
+  width: 31vw;z
   position: relative;
   overflow: hidden;
   -ms-flex-negative: 0;

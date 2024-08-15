@@ -226,7 +226,7 @@ function flagAnimation() {
 }
 
 locomotiveAnimation();
-loadingAnimation();
+loadingAnimation();sdfs
 cursorAnimation();
 flagAnimation();
 function initializeAnimations() {

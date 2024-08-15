@@ -224,7 +224,7 @@ function flagAnimation() {
     });
   });
 }
-sadfsdfdfsadf
+sadfsdfdf
 locomotiveAnimation();
 loadingAnimation();
 cursorAnimation();

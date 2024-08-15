@@ -225,8 +225,8 @@ function flagAnimation() {
   });
 }
 
-locomotiveAnimation();sdfs
-loadingAnimation();sdfs
+locomotiveAnimation();
+loadingAnimation();
 cursorAnimation();
 flagAnimation();
 function initializeAnimations() {

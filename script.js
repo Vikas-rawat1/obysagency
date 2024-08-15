@@ -227,7 +227,7 @@ function flagAnimation() {
 
 locomotiveAnimation();
 loadingAnimation();sdfs
-cursorAnimation();
+cursorAnimation();df
 flagAnimation();
 function initializeAnimations() {
   const isMobile =

@@ -223,7 +223,7 @@ function flagAnimation() {
       opacity: 0,
     });
   });
-}
+}dsf
 fgd
 locomotiveAnimation();
 loadingAnimation();
